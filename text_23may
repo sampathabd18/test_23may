@@ -1,0 +1,108 @@
+
+sampath@gitMINGW64 ~ (master)
+$ git init TEST
+cd TEST
+Reinitialized existing Git repository in C:/Users/DELL/test/.git/
+
+sampath@gitMINGW64 ~/TEST (master)
+$ touch file.c file.txt
+
+sampath@gitMINGW64 ~/TEST (master)
+$ echo "// Sample C code" > file.c
+echo "This is a sample text file." > file.txt
+
+sampath@gitMINGW64 ~/TEST (master)
+$ git add .
+git commit -m "Initial commit with .c and .txt files"
+warning: in the working copy of 'file.c', LF will be replaced by CRLF the next t
+ime Git touches it
+warning: in the working copy of 'file.txt', LF will be replaced by CRLF the next
+ time Git touches it
+[master (root-commit) 8d512b9] Initial commit with .c and .txt files
+ 6 files changed, 2 insertions(+)
+ create mode 100644 and
+ create mode 100644 file.c
+ create mode 100644 file.txt
+ create mode 100644 files.c
+ create mode 100644 files.test
+ create mode 100644 files.txt
+
+sampath@gitMINGW64 ~/TEST (master)
+$ git branch B1
+git branch B2
+git branch B3
+git branch B4
+
+sampath@gitMINGW64 ~/TEST (master)
+$ git checkout B1
+echo "// Code added in B1" >> file.c
+git commit -am "Changes in B1"
+
+git checkout B2
+echo "// Code added in B2" >> file.c
+git commit -am "Changes in B2"
+
+git checkout B4
+echo "// Code added in B4" >> file.c
+git commit -am "Changes in B4"
+Switched to branch 'B1'
+warning: in the working copy of 'file.c', LF will be replaced by CRLF the next t
+ime Git touches it
+[B1 7b6762c] Changes in B1
+ 1 file changed, 1 insertion(+)
+Switched to branch 'B2'
+warning: in the working copy of 'file.c', LF will be replaced by CRLF the next t
+ime Git touches it
+[B2 0e40fac] Changes in B2
+ 1 file changed, 1 insertion(+)
+Switched to branch 'B4'
+warning: in the working copy of 'file.c', LF will be replaced by CRLF the next t
+ime Git touches it
+fatal: User cancelled dialog.
+error: unable to read askpass response from 'C:/Program Files/Git/mingw64/bin/git-askpass.exe'
+Username for 'https://github.com': gitfgg
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/sampathabd18/test_23may.git/'
+
+sampath@gitMINGW64 ~/TEST (B3|MERGING)
+$ git commit -am "merged b1,b2,b4 into b3"
+[B3 a22b787] merged b1,b2,b4 into b3
+
+sampath@gitMINGW64 ~/TEST (B3)
+$ git remote and orgin https://github.com/sampathabd18/test_23may.git test 23may
+error: unknown subcommand: `and'
+usage: git remote [-v | --verbose]
+   or: git remote add [-t <branch>] [-m <master>] [-f] [--tags | --no-tags] [--mirror=<fetch|push>] <name> <url>
+   or: git remote rename [--[no-]progress] <old> <new>
+   or: git remote remove <name>
+   or: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+   or: git remote [-v | --verbose] show [-n] <name>
+   or: git remote prune [-n | --dry-run] <name>
+   or: git remote [-v | --verbose] update [-p | --prune] [(<group> | <remote>)...]
+   or: git remote set-branches [--add] <name> <branch>...
+   or: git remote get-url [--push] [--all] <name>
+   or: git remote set-url [--push] <name> <newurl> [<oldurl>]
+   or: git remote set-url --add <name> <newurl>
+   or: git remote set-url --delete <name> <url>
+
+    -v, --[no-]verbose    be verbose; must be placed before a subcommand
+
+
+sampath@gitMINGW64 ~/TEST (B3)
+$ git remote add orgin https://github.com/sampathabd18/test_23may.git git push -u origin b3
+error: unknown switch `u'
+usage: git remote add [<options>] <name> <url>
+
+    -f, --[no-]fetch      fetch the remote branches
+    --[no-]tags           import all tags and associated objects when fetching
+                          or do not fetch any tag at all (--no-tags)
+    -t, --[no-]track <branch>
+                          branch(es) to track
+    -m, --[no-]master <branch>
+                          master branch
+    --[no-]mirror[=(push|fetch)]
+                          set up remote as a mirror to push to or fetch from
+
+
+sampath@gitMINGW64 ~/TEST (B3)
+$
